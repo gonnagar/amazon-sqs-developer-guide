@@ -30,7 +30,7 @@ Each message receives a system\-assigned *message ID* that Amazon SQS returns to
 
 ### Receipt handle<a name="receipt-handle"></a>
 
-Every time you receive a message from a queue, you receive a *receipt handle* for that message\. This handle is associated with the action of receiving the message, not with the message itself\. To delete the message or to change the message visibility, you must provide the receipt handle \(not the message ID\)\. Thus, you must always receive a message before you can delete it \(you can't put a message into the queue and then recall it\)\. The maximum length of a receipt handle is 1,024 characters\. 
+Every time you receive a message from a queue, you receive a *receipt handle* for that message\. This handle is associated with the action of receiving the message, not with the message itself\. To delete the message or to change the message visibility, you must provide the receipt handle \(not the message ID\)\. Thus, you must always receive a reciept handle for a message before you can delete it \(you can't put a message into the queue and then recall it\)\. The maximum length of a receipt handle is 1,024 characters\. 
 
 **Important**  
 If you receive a message more than once, each time you receive it, you get a different receipt handle\. You must provide the most recently received receipt handle when you request to delete the message \(otherwise, the message might not be deleted\)\. 
